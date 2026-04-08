@@ -1,5 +1,8 @@
+import bcrypt from 'bcrypt';
 import { pool, query } from '../db.js';
 import { sendError, sendOk } from '../utils/http.js';
+
+const SALT_ROUNDS = 12;
 
 export async function listUsers(req, res) {
   try {
@@ -53,7 +56,7 @@ export async function createUser(req, res) {
     return sendError(res, 400, 'Display name is required.');
   }
   const safeRole = role === 'admin' ? 'admin' : 'student';
-  const password_hash = password;
+  const password_hash = await bcrypt.hash(password, SALT_ROUNDS);
 
   const connection = await pool.getConnection();
   try {
@@ -130,7 +133,7 @@ export async function updateUser(req, res) {
       }
       if (password) {
         fields.push('password_hash = ?');
-        vals.push(password);
+        vals.push(await bcrypt.hash(password, SALT_ROUNDS));
       }
       if (role) {
         fields.push('role = ?');
