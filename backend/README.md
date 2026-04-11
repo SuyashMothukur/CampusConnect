@@ -3,16 +3,18 @@
 Server-side code is in `../server/`.
 
 ## Structure
-server/
-├── src/
-│   ├── controllers/    ← auth, users, offerings, sessions, availability, reviews, reports
-│   ├── middleware/     ← requireAuth (JWT), requireAdmin (role check)
-│   ├── routes/         ← api.js (all routes)
-│   ├── db.js           ← MySQL connection pool
-│   ├── index.js        ← Express entry point
-│   └── utils/http.js   ← sendOk / sendError helpers
-├── sql/                ← schema.sql, seed.sql, create_admin.sql
-└── .env.example
+
+**`server/src/controllers/`** — Route handlers: auth, users, offerings, sessions, availability, reviews, reports
+
+**`server/src/middleware/`** — requireAuth (JWT verification), requireAdmin (role check)
+
+**`server/src/routes/api.js`** — All API route definitions
+
+**`server/src/db.js`** — MySQL connection pool (mysql2)
+
+**`server/src/index.js`** — Express entry point
+
+**`server/sql/`** — schema.sql, seed.sql, create_admin.sql
 
 ## Stack
 
