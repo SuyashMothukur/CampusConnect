@@ -6,25 +6,26 @@
 
 ### Parth Mehta
 
-Parth led the Phase 6 implementation end to end. He designed and built the complete JWT-based authentication system, including the signup, login, logout, change-password, and `/me` endpoints in the Express backend, along with the corresponding React pages (Login, Signup, ChangePassword) and the `AuthContext` provider that manages token state across the frontend. He identified and fixed the critical plaintext password vulnerability carried over from Phase 5, integrating bcrypt hashing (12 salt rounds) into both the create and update user flows. He restructured the GitHub repository to meet Phase 6 requirements, wrote the main `README.md`, and set up the required folder structure. Throughout Phase 6, Parth served as the integration point for the team, ensuring all components worked correctly together before submission.
+I led the Phase 6 implementation end to end. I designed and built the complete JWT-based authentication system — signup, login, logout, change-password, and the /me endpoint — along with the AuthContext provider that manages token state across the frontend. I identified and fixed the critical plaintext password vulnerability from Phase 5, integrating bcrypt hashing into both the create and update user flows, and I restructured the GitHub repository and wrote the main README to meet Phase 6 requirements.
+
 
 ---
 
 ### Anurag Pokala
 
-Anurag contributed to the database design foundations that made Phase 6 possible. In Phase 2, he completed the entity and relationship definitions and led the conversion of the conceptual ER diagram into the logical ER diagram in Phase 3, ensuring all entities had properly identified primary and foreign keys. In Phase 6, Anurag contributed to backend API development, helping extend and test the session request and offering controllers to ensure they correctly enforced the authentication and authorization requirements introduced in this phase. He also reviewed the final report for accuracy and completeness.
+In Phase 6, I built the session requests controller and the corresponding frontend page, implementing the full create, read, update, and delete flow for session requests including status management across pending, accepted, declined, and cancelled states. I also wrote and tested the parameterized SQL queries that power the session request and skill offering endpoints, ensuring all inputs were sanitized and that foreign key relationships were correctly enforced.
 
 ---
 
 ### Donald Manka
 
-Donald contributed to the structural and design foundations across multiple phases. He developed the real-world entities list in Phase 1, worked on the ER diagram in Phase 2, and produced the relational schema diagram in Phase 3 that served as the blueprint for the MySQL implementation. In Phase 6, Donald took responsibility for the frontend CRUD interface improvements, ensuring that the Skill Offerings, Availability, and Session Requests pages correctly handled all four operations with proper success and error states. He also gathered and organized the sample data screenshots required for the final report.
+In Phase 6, I built the availability and reviews pages on the frontend, implementing the full CRUD interface for both. I also wrote the seed data in seed.sql, populating all major tables with realistic sample records to support testing and demonstration of the application's functionality across all features.
 
 ---
 
 ### Suyash Mothukuri
 
-Suyash owns the GitHub repository and was instrumental in the Phase 5 demonstration, building the initial mock application that connected the React frontend to the MySQL database through the Node.js backend. This foundation — the working Express server structure, the mysql2 connection pool, and the basic CRUD controller pattern — made Phase 6 possible. In Phase 6, Suyash led the analytics reporting work, designing and implementing the four SQL report queries in `reportsController.js` using complex joins, conditional aggregation, and GROUP BY clauses, and building the Reports page in React to visualize results for administrators.
+In Phase 6, I designed and implemented the four analytics report queries in reportsController.js — covering skill demand, provider ratings, monthly session activity, and moderation reports — using complex joins, conditional aggregation, and GROUP BY clauses. I also built the Reports page in React to display these results clearly for administrators, and I set up and maintained the GitHub repository throughout the project.
 
 ---
 
