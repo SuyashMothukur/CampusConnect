@@ -1,5 +1,4 @@
 # Team roles and contributions
-# Team Roles and Contributions
 
 ## Phase 6 — Final Implementation
 
