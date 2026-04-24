@@ -59,6 +59,7 @@ export default function AppLayout() {
           <button className="btn-logout" onClick={handleLogout}>
             Sign out
           </button>
+          <div className="sidebar-copy">© 2026 CampusConnect</div>
         </div>
       </aside>
 
@@ -131,6 +132,7 @@ export default function AppLayout() {
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         .user-role { font-size: 0.75rem; color: var(--sidebar-muted); margin-top: 0.15rem; }
+        .sidebar-copy { font-size: 0.65rem; color: var(--sidebar-muted); opacity: 0.5; text-align: center; padding: 0 0.5rem; }
         .btn-logout {
           background: rgba(255,255,255,0.06);
           border: 1px solid rgba(255,255,255,0.1);
